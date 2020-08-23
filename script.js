@@ -6,9 +6,9 @@ async function greet(e) {
   if (response.ok) {
     let json = await response.json();
     pokemon.innerHTML = `
-      <p><img src='${json.sprites.other["official-artwork"].front_default}' /></p>
-      <p>height: ${json.height} </p>
-      <p>weight: ${json.weight} </p>
+      <p><img src='${json.sprites.other["official-artwork"].front_default}' height = 64 /></p>
+      <p>Height: ${json.height} </p>
+      <p>Weight: ${json.weight} </p>
       `;
   } else {
     pokemon.innerHTML = "Thats not a pokemon :3";
